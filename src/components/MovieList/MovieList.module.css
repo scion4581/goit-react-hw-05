@@ -1,0 +1,12 @@
+.movieList {
+    list-style-type: disc;
+    padding: 10px;
+}
+
+.movieLink {
+    text-decoration: underline;
+}
+
+.movieLink:hover {
+    color: red;
+}

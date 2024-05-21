@@ -1,0 +1,11 @@
+.subPageLinks {
+    margin: 10px 0;
+}
+
+.subPageLinks a {
+    text-decoration: underline;
+}
+
+.active {
+    color: red;
+}

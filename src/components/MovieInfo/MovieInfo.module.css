@@ -1,0 +1,13 @@
+.movieInfoCard {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.movieTitle {
+    padding: 20px 0;
+}
+
+.movieInfoRow {
+    margin: 10px 0;
+}

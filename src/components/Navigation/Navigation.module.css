@@ -1,0 +1,16 @@
+.nav {
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 #ccc;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 18px;
+    
+}
+
+.active {
+    color: red;
+}
