@@ -18,7 +18,6 @@ export default function MovieReviews() {
             setLoading(true);
             try {
                 const foundReviews = await TmdbApiClient.getMovieReviews(movieId);
-                console.log(foundReviews);
                 setReviews(foundReviews);
             } catch (error) {
                 setErrorMessage(error.message);

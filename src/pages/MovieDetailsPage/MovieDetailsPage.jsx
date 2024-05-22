@@ -7,9 +7,9 @@ import Loader from '../../components/Loader/Loader';
 import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import TmdbApiClient from '../../TmdbApiClient';
 
-import css from './MovieInfoPage.module.css';
+import css from './MovieDetailsPage.module.css';
 
-export default function MovieInfoPage() {
+export default function MovieDetailsPage() {
 
   const location = useLocation();
   const backLinkURLRef = useRef(location.state ?? "/movies");

@@ -12,31 +12,22 @@ export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const [query, setQuery] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const [errorMessage, setErrorMessage] = useState('');
 
-
     useEffect(() => {
-      const queryParam = searchParams.get('query');
-      if (queryParam) {
-          setQuery(queryParam);
-      }
-    }, [searchParams]); 
-
-    useEffect(() => {
-        async function findMovies() {
-          if (query === '') return;
+      async function findMovies() {
+          const queryParam = searchParams.get('query');
+          if (!queryParam) return;
             setErrorMessage('');
             setLoading(true);
             try {
-              const foundMovies = await TmdbApiClient.findMoviesByName(query);
+              const foundMovies = await TmdbApiClient.findMoviesByName(queryParam);
               if (foundMovies) {
                 setMovies(foundMovies);
               } else {
                 setErrorMessage('There are no images found');
               }
-              
             } catch (error) {
               setErrorMessage(error.message); 
             } finally {
@@ -45,7 +36,7 @@ export default function MoviesPage() {
         };
 
         findMovies();
-    }, [query]);
+    }, [searchParams]);
   
     return (
         <div className="section">

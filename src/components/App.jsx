@@ -7,7 +7,7 @@ import Layout from "./Layout/Layout";
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const ErrorPage = lazy(() => import('../pages/ErrorPage/ErrorPage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage/MoviesPage'));
-const MovieInfoPage = lazy(() => import('../pages/MovieInfoPage/MovieInfoPage'));
+const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage/MovieDetailsPage'));
 const MovieCast = lazy(() => import('../components/MovieCast/MovieCast'));
 const MovieReviews = lazy(() => import('../components/MovieReviews/MovieReviews'));
 
@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
-          <Route path="/movies/:movieId" element={<MovieInfoPage />}>
+          <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
             <Route path="cast" element={<MovieCast />} />
             <Route path="reviews" element={<MovieReviews />} />
           </Route>
